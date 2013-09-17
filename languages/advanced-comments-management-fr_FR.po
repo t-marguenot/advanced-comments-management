@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: blacklist-probation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-08-29 15:30+0100\n"
-"PO-Revision-Date: 2013-08-29 15:49+0100\n"
+"POT-Creation-Date: 2013-09-17 12:17+0100\n"
+"PO-Revision-Date: 2013-09-17 12:17+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -13,41 +13,42 @@ msgstr ""
 "X-Poedit-Basepath: .\n"
 "X-Poedit-SearchPath-0: ..\n"
 
-#: ../classes/admin/main.php:70
-#: ../classes/admin/main.php:85
-msgid "Blacklist"
-msgstr "Blacklister"
-
-#: ../classes/admin/main.php:72
+#: ../classes/admin/main.php:65
 msgid "Allow to comment"
 msgstr "Autoriser à commenter"
 
-#: ../classes/admin/main.php:72
-#: ../classes/admin/main.php:83
+#: ../classes/admin/main.php:65
 msgid "Authorize"
 msgstr "Autoriser"
 
-#: ../classes/admin/main.php:76
+#: ../classes/admin/main.php:67
+msgid "Blacklist"
+msgstr "Blacklister"
+
+#: ../classes/admin/main.php:71
 msgid "Remove from the list of members whose comments are moderated"
 msgstr "Retirer de la liste des membres dont les commentaires doivent être modérés => Remove from the list of members whose comments are moderated"
 
-#: ../classes/admin/main.php:76
-msgid "Remove"
-msgstr "Retirer"
+#: ../classes/admin/main.php:71
+msgid "Do not restrain"
+msgstr "Ne pas modérer"
 
-#: ../classes/admin/main.php:78
+#: ../classes/admin/main.php:73
 msgid "Add to the list of members whose comments are moderated"
 msgstr "Ajouter à la liste des membres dont les commentaires doivent être modérés => Add to the list of members whose comments are moderated"
 
-#: ../classes/admin/main.php:78
-msgid "Add"
-msgstr "Ajouter"
+#: ../classes/admin/main.php:73
+msgid "Restrain"
+msgstr "Modérer"
 
-#: ../classes/admin/main.php:83
-msgid "Allow to comment (e-mail)"
-msgstr "Autoriser à commenter (e-mail)"
+#~ msgid "Remove"
+#~ msgstr "Retirer"
 
-#: ../classes/admin/main.php:85
-msgid "Blacklists (email)"
-msgstr "Blacklister (e-mail)"
+#~ msgid "Add"
+#~ msgstr "Ajouter"
 
+#~ msgid "Allow to comment (e-mail)"
+#~ msgstr "Autoriser à commenter (e-mail)"
+
+#~ msgid "Blacklists (email)"
+#~ msgstr "Blacklister (e-mail)"

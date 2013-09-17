@@ -1,14 +1,14 @@
 <?php
 /*
- Plugin Name: Comments moderator
+ Plugin Name: Advanced Comments Management
  Version: 0.2
- Plugin URI: https://github.com/herewithme/bea-plugin-boilerplate
- Description: Comments management > blacklisting access and moderation
+ Plugin URI: https://github.com/t-marguenot/comments-moderator
+ Description: This plugin allows you to moderate and blacklist users directly in the edit page of comments.
  Author: Beapi
  Author URI: http://www.beapi.fr
  Domain Path: languages
  Network: false
- Text Domain: comments-moderator
+ Text Domain: advanced-comments-management
 
  Copyright 2013 Amaury Balmer (amaury@beapi.fr)
 

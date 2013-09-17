@@ -1,4 +1,4 @@
-bea-plugin-boilerplate
+Advanced Comments Management
 ======================
 
-The BEA Plugin Boilerplate serves as a foundation off of which to build your WordPress plugins.
+This plugin allows you to moderate and blacklist users directly in the edit page of comments.
