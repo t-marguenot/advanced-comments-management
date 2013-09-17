@@ -3,55 +3,42 @@ class CM_PL_Admin_Main {
 
 	public function __construct() {
 		add_action( 'admin_init', array( __CLASS__, 'admin_init' ) );
-	}
-
-	public static function admin_init() {
 		add_filter( 'comment_row_actions', array( __CLASS__, 'comment_row_actions' ), 10, 2 );
+	}
+	
+	// moderates and blacklist email addresses based on the actions
+	public static function admin_init() {
 
 		$user_email = ( isset( $_GET['email'] ) && !empty( $_GET['email'] ) ) ? $_GET['email'] : false;
 		$users_moderated = get_option( 'moderation_keys' );
 		$users_blacklisted = get_option( 'blacklist_keys' );
 
 		if ( isset( $_GET['cm_action'] ) && $_GET['cm_action'] == "blacklist" && $user_email != false ) {
-			if ( !strstr($users_blacklisted, $user_email) ) {
-				if( empty( $users_blacklisted ) ){
-					update_option( 'blacklist_keys', $user_email );
-				}else{
-					update_option( 'blacklist_keys', $users_blacklisted."\r\n".$user_email );
-				}
+			if ( stripos( $users_blacklisted, $user_email ) === false ) {
+				update_option( 'blacklist_keys', $users_blacklisted."\r\n".$user_email );
 			}
 		}
 
 		if ( isset( $_GET['cm_action'] ) && $_GET['cm_action'] == "autorize" && $user_email != false ) {
-			$pos = strpos("\r\n".$user_email, $users_blacklisted );
-			if( $pos === true ){
-				update_option( 'blacklist_keys', str_replace("\r\n".$user_email, "", $users_blacklisted )  );
-			}else{
+			if( stripos( $users_blacklisted, $user_email ) !== false ){
 				update_option( 'blacklist_keys', str_replace( $user_email, "", $users_blacklisted ) );
 			}
 		}
 
 		if ( isset( $_GET['cm_action'] ) && $_GET['cm_action'] == "moderate" && $user_email != false ) {
-			if ( !strstr($users_moderated, $user_email) ) {
-				
-				if( empty( $users_moderated ) ){
-					update_option( 'moderation_keys', $user_email );
-				}else{
-					update_option( 'moderation_keys', $users_moderated."\r\n".$user_email );
-				}
+			if ( stripos( $users_moderated, $user_email ) === false ) {
+				update_option( 'moderation_keys', $users_moderated."\r\n".$user_email );
 			}
 		}
 
-		if ( isset( $_GET['cm_action'] ) && $_GET['cm_action'] == "unmoderate" && $user_id != false ) {
-			$pos = strpos("\r\n".$user_email, $users_moderated );
-			if( $pos === true ){
-				update_option( 'blacklist_keys', str_replace("\r\n".$user_email, "", $users_moderated )  );
-			}else{
-				update_option( 'blacklist_keys', str_replace( $user_email, "", $users_moderated ) );
+		if ( isset( $_GET['cm_action'] ) && $_GET['cm_action'] == "unmoderate" && $user_email != false ) {
+			if( stripos( $users_moderated, $user_email ) !== false ){
+				update_option( 'moderation_keys', str_replace( $user_email, "", $users_moderated ) );
 			}
 		}
 	}
-
+	
+	// adds buttons to the edit page for moderate comments and blacklist
 	public static function comment_row_actions( $actions, $comment ) {
 		$user_email = $comment->comment_author_email;
 		$users_moderated = get_option( 'moderation_keys' );

@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: blacklist-probation\n"
+"Project-Id-Version: advanced-comments-management\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-09-17 12:17+0100\n"
-"PO-Revision-Date: 2013-09-17 12:17+0100\n"
+"POT-Creation-Date: 2013-09-17 15:47+0100\n"
+"PO-Revision-Date: 2013-09-17 15:47+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -13,31 +13,31 @@ msgstr ""
 "X-Poedit-Basepath: .\n"
 "X-Poedit-SearchPath-0: ..\n"
 
-#: ../classes/admin/main.php:65
+#: ../classes/admin/main.php:52
 msgid "Allow to comment"
 msgstr "Autoriser à commenter"
 
-#: ../classes/admin/main.php:65
+#: ../classes/admin/main.php:52
 msgid "Authorize"
 msgstr "Autoriser"
 
-#: ../classes/admin/main.php:67
+#: ../classes/admin/main.php:54
 msgid "Blacklist"
 msgstr "Blacklister"
 
-#: ../classes/admin/main.php:71
+#: ../classes/admin/main.php:58
 msgid "Remove from the list of members whose comments are moderated"
 msgstr "Retirer de la liste des membres dont les commentaires doivent être modérés => Remove from the list of members whose comments are moderated"
 
-#: ../classes/admin/main.php:71
+#: ../classes/admin/main.php:58
 msgid "Do not restrain"
 msgstr "Ne pas modérer"
 
-#: ../classes/admin/main.php:73
+#: ../classes/admin/main.php:60
 msgid "Add to the list of members whose comments are moderated"
 msgstr "Ajouter à la liste des membres dont les commentaires doivent être modérés => Add to the list of members whose comments are moderated"
 
-#: ../classes/admin/main.php:73
+#: ../classes/admin/main.php:60
 msgid "Restrain"
 msgstr "Modérer"
 
