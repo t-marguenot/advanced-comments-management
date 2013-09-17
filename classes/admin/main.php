@@ -49,15 +49,15 @@ class CM_PL_Admin_Main {
 		}
 		
 		if ( strstr( $users_blacklisted, $user_email) ) {
-			$probation = "<a href='".add_query_arg( array( 'cm_action' => 'autorize', 'email' => $user_email ), admin_url( 'edit-comments.php' ) )."' title='".__( 'Allow to comment', 'comments-moderator' )."'>".__( 'Authorize', 'comments-moderator' )."</a>";
+			$probation = "<a href='".add_query_arg( array( 'cm_action' => 'autorize', 'email' => $user_email ), admin_url( 'edit-comments.php' ) )."' title='".__( 'Allow to comment', 'advanced-comments-management' )."'>".__( 'Authorize', 'advanced-comments-management' )."</a>";
 		}else{
-			$probation = "<a href='".add_query_arg( array( 'cm_action' => 'blacklist', 'email' => $user_email ), admin_url( 'edit-comments.php' ) )."' title='".__( 'Blacklist', 'comments-moderator' )."'>".__( 'Blacklist', 'comments-moderator' )."</a>";
+			$probation = "<a href='".add_query_arg( array( 'cm_action' => 'blacklist', 'email' => $user_email ), admin_url( 'edit-comments.php' ) )."' title='".__( 'Blacklist', 'advanced-comments-management' )."'>".__( 'Blacklist', 'advanced-comments-management' )."</a>";
 		}
 		
 		if( strstr($users_moderated, $user_email) ) {
-			$probation2 = "<a href='".add_query_arg( array( 'cm_action' => 'unmoderate', 'email' => $user_email ), admin_url( 'edit-comments.php' ) )."' title='".__( 'Remove from the list of members whose comments are moderated', 'comments-moderator' )."'>".__( 'Do not restrain', 'comments-moderator' )."</a>";
+			$probation2 = "<a href='".add_query_arg( array( 'cm_action' => 'unmoderate', 'email' => $user_email ), admin_url( 'edit-comments.php' ) )."' title='".__( 'Remove from the list of members whose comments are moderated', 'advanced-comments-management' )."'>".__( 'Do not restrain', 'advanced-comments-management' )."</a>";
 		}else{
-			$probation2 = "<a href='".add_query_arg( array( 'cm_action' => 'moderate', 'email' => $user_email ), admin_url( 'edit-comments.php' ) )."' title='".__( 'Add to the list of members whose comments are moderated', 'comments-moderator' )."'>".__( 'Restrain', 'comments-moderator' )."</a>";
+			$probation2 = "<a href='".add_query_arg( array( 'cm_action' => 'moderate', 'email' => $user_email ), admin_url( 'edit-comments.php' ) )."' title='".__( 'Add to the list of members whose comments are moderated', 'advanced-comments-management' )."'>".__( 'Restrain', 'advanced-comments-management' )."</a>";
 		}
 		
 		$actions['edit'] .= ( isset( $probation ) ) ? '</span><span class="hide-if-no-js"> | ' . $probation : "";
