@@ -48,13 +48,13 @@ class CM_PL_Admin_Main {
 			return false;
 		}
 		
-		if ( stripos( $users_blacklisted, $user_email) ) {
+		if ( stripos( $users_blacklisted, $user_email ) !== false ) {
 			$probation = "<a href='".add_query_arg( array( 'cm_action' => 'autorize', 'email' => $user_email ), admin_url( 'edit-comments.php' ) )."' title='".__( 'Allow to comment', 'advanced-comments-management' )."'>".__( 'Authorize', 'advanced-comments-management' )."</a>";
 		}else{
 			$probation = "<a href='".add_query_arg( array( 'cm_action' => 'blacklist', 'email' => $user_email ), admin_url( 'edit-comments.php' ) )."' title='".__( 'Blacklist', 'advanced-comments-management' )."'>".__( 'Blacklist', 'advanced-comments-management' )."</a>";
 		}
 		
-		if( stripos($users_moderated, $user_email) ) {
+		if( stripos($users_moderated, $user_email !== false ) ) {
 			$probation2 = "<a href='".add_query_arg( array( 'cm_action' => 'unmoderate', 'email' => $user_email ), admin_url( 'edit-comments.php' ) )."' title='".__( 'Remove from the list of members whose comments are moderated', 'advanced-comments-management' )."'>".__( 'Do not restrain', 'advanced-comments-management' )."</a>";
 		}else{
 			$probation2 = "<a href='".add_query_arg( array( 'cm_action' => 'moderate', 'email' => $user_email ), admin_url( 'edit-comments.php' ) )."' title='".__( 'Add to the list of members whose comments are moderated', 'advanced-comments-management' )."'>".__( 'Restrain', 'advanced-comments-management' )."</a>";
